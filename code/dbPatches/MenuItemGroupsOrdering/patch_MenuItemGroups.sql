@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dbo].[MenuItemGroups] ADD [Order] [int] NOT NULL DEFAULT ((0))

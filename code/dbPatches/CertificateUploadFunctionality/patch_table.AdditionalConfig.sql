@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dbo].[AdditionalConfig] ADD [NotificationCertificate] [nvarchar](200)

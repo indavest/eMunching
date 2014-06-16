@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - eMunching Videos</title>
+
+        <!--Very important to ensure that it looks good on Mobile Devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!--CSS-->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link href="../../Content/themes/base/MobileTheme.css" rel="stylesheet" type="text/css" />
+                
+        <!--JQuery scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+        
+        <!--JQuery UI scripts-->
+         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
+
+        <!--JQuery Mobile scripts-->
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>
+        
+        
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        @System.Web.Optimization.Styles.Render("~/Content/css")
+        @System.Web.Optimization.Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div data-role="page" data-theme="a">
+            <!--
+            <div data-role="header">
+                <h1>Videos</h1>
+            </div>
+            -->
+            <div id="body">
+                @RenderSection("featured", required: false)
+                <section class="content-wrapper main-content clear-fix">
+                    @RenderBody()
+                </section>
+            </div>
+            <footer>
+            </footer>
+        
+            @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+            @RenderSection("scripts", required: false)
+            <!--
+            <div data-role="footer" data-position="fixed">
+                <h1>&copy; @DateTime.Now.Year - Powered by eMunching</h1>
+            </div>
+            -->
+        </div>
+    </body>
+</html>

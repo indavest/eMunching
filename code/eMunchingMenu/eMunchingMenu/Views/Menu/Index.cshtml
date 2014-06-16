@@ -1,0 +1,159 @@
+﻿@model eMunchingMenu.Models.Menu
+
+@{
+    ViewBag.Title = "Menu: " + Model.RestaurantName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<script src="../../plugins/cycle/jquery.cycle.all.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#menu").menu({
+            select: function (event, ui) {
+                var link = ui.item.children("a:first");
+                if (link.attr("target") || event.metaKey || event.shiftKey || event.ctrlKey) {
+                    return;
+                }
+                location.href = link.attr("href");
+            }
+        });
+
+        $(".accordion").accordion();
+
+    });
+
+
+</script>
+<style>
+
+#wrapper {
+    width: 100%;
+    border-style:none;
+    border-width: thin;
+    border-color: gray;
+    border-radius:5px;
+    -moz-border-radius:5px; /* Firefox 3.6 and earlier */
+
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#first {
+    width: 200px;
+    float:left; /* add this */
+    /*Use the borders to debug*/
+    /*border: 1px solid red;*/ 
+    padding-left:20px;
+    padding-right:20px;
+}
+#second 
+{
+    /*Use the borders to debug*/
+    /*border: 1px solid green;*/
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
+td.Name
+{
+    text-align:left;
+}
+
+td.Price
+{
+    text-align:right;
+    padding-right:20px;
+}
+
+.menuItem_Thumbnail
+{
+    height:200px;
+    width:200px;
+    border-style:none;
+    border-width: thin;
+    border-color: gray;
+    border-radius:5px;
+}
+
+.hoverStyle
+{
+    background-color:#FFFACD;
+}
+
+h2, h3
+{
+    font-family:Sans-Serif;
+    padding-top:10px;
+    padding-left: 20px;
+}
+
+li
+{
+    font-family:Sans-Serif;
+    font-size:large;
+}
+
+.menuItem_Pics 
+{ 
+    float:left;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.menuItem_Description
+{
+     overflow: hidden;
+}
+
+
+</style>
+
+<div class="wrapper">
+    <div id="first">
+        <!--Oddly, we are also using a JQuery UI "menu" widget. This is not to be confused with the Menu Model-->
+        <ul id="menu">
+            @{
+                foreach(var menuCategory in Model.MenuCategories)
+                {
+                    <li>
+                        <a href="?categoryId=@menuCategory.CategoryId">@menuCategory.CategoryName</a>
+                    </li>
+                }
+             }
+        </ul>
+
+    </div>
+
+    <div id="second" class="accordion">
+        @{
+            if(ViewBag.categoryId !=null)
+            {
+                var cat = Model.MenuCategories.Find(i => i.CategoryId == ViewBag.categoryId);
+            
+                foreach(var menuItem in cat.MenuItems)
+                {
+                    <h3>
+                        <table width="100%">
+                            <tr>
+                                <td class="Name">@menuItem.Name</td>
+                                <td class="Price">@menuItem.Price</td>
+                            </tr>
+                        </table>
+                    </h3>
+                    <div class="menuItem_Details">
+                        <div class="menuItem_Pics">
+                            <img class="menuItem_Thumbnail" src="http://10.10.10.189//Restaurants/@Model.RestaurantName/ArtWork/MenuItems/@menuItem.Images[0]" alt="" />
+                        </div>
+                        <div class="menuItem_Description">
+                            @menuItem.Description                                
+                        </div>
+                    </div>
+
+                }
+            }             
+        }
+    </div>
+
+
+    <div class="sides">
+    </div>
+</div>

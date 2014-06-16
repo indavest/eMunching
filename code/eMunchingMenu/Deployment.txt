@@ -1,0 +1,3 @@
+http://hostname/menu/index/<restId>
+
+http://hostname/menu/slideshow/<restId>
