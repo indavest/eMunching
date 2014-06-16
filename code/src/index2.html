@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome to Emunching | Home</title>
+<link rel="stylesheet" href="css/site.css" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/effectScript.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/modal-window.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20092473-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" lang="javascript">
+	var openMyModal = function(source)
+	{
+		modalWindow.windowId = "myModal";
+		modalWindow.width = 480;
+		modalWindow.height = 405;
+		modalWindow.content = "<iframe width='480' height='405' frameborder='0' scrolling='no' allowtransparency='true' src='" + source + "'>&lt/iframe>";
+		modalWindow.open();
+	};	
+	</script>
+	<style type="text/css">
+	html,body
+	{
+		margin:0;
+		padding:0;
+	}
+	.modal-overlay
+	{
+		position:fixed;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		height:100%;
+		width:100%;
+		margin:0;
+		padding:0;
+		background:#fff;
+		opacity:.75;
+		filter: alpha(opacity=75);
+		-moz-opacity: 0.75;
+		z-index:101;
+	}
+	* html .modal-overlay
+	{   
+		position: absolute;
+		height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+	}
+	.modal-window
+	{
+		position:fixed;
+		top:50%;
+		left:50%;
+		margin:0;
+		padding:0;
+		z-index:102;
+	}
+	* html .modal-window
+	{
+		position:absolute;
+	}
+	.close-window
+	{
+		position:absolute;
+		width:32px;
+		height:32px;
+		right:8px;
+		top:8px;
+		background:transparent url('close-button.png') no-repeat scroll right top;
+		text-indent:-99999px;
+		overflow:hidden;
+		cursor:pointer;
+		opacity:.5;
+		filter: alpha(opacity=50);
+		-moz-opacity: 0.5;
+	}
+	.close-window:hover
+	{
+		opacity:.99;
+		filter: alpha(opacity=99);
+		-moz-opacity: 0.99;
+	}
+	</style>
+</head>
+<body class="design">
+<!--[if IE 9]> <div id="ie9"> <![endif]-->
+<div id="container">
+<header>
+   <table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	   <td>
+		<a href="index.html"><img src="images/logo.jpg" width="484" height="92" alt="Emunching" title="emunching" id="emunchingLogo"/></a>
+	   </td>
+	   <td align="right">
+	    <a href="/admin/" onclick="openMyModal('/admin/'); return false;" class="icoMr">Indavest Login</a>  
+		<a href="/restaurants/" onclick="openMyModal('/restaurants/'); return false;" class="icoMr">Restaurant Login</a>
+	    <a class="signin" href="/admin/"><IMG SRC="images/button-IV2.png" WIDTH="113" HEIGHT="26" BORDER="0" ALT="Indavest Login"></a> <a class="signin" href="/restaurants/"><IMG SRC="images/button-RS2.png" WIDTH="113" HEIGHT="26" BORDER="0" ALT="Restaurant Login"></a>
+	   </td>
+	</tr>
+   </table>
+   <!-- PopUps Starts -->
+     <div id="popupAboutContainer">
+         <img src="images/popup-close.png" width="22" height="20" id="closex" alt="close" />
+         <div id="popupAboutContainerWrapper"></div>
+     </div>
+     <div id="popupPricingContainer">
+         <img src="images/popup-close.png" width="22" height="20" id="closey" alt="close" />
+         <div id="popupPricingContainerWrapper"></div>
+     </div>
+     <div id="backgroundPopup"></div>
+   <!-- PopUps Ends -->
+   <div id="getSignUp">
+    <p>If you are a restaurant interested in participating in our Limited Private Beta,</p>
+    <p class="last"><a href="signup.php">sign up !</a></p>
+    </div>
+    <div id="ivlogo">
+     <a href="http://www.indavest.com" target="_blank"><img src="images/logo-indavest.png" width="122" height="116" alt="Indavest" id="logo" /></a>
+    </div>
+    <div id="logoFix"></div>
+    <nav id="menu">
+      <ul>
+        <li class="first"><a href="#">Home</a></li>
+        <li><a href="tour.html">Tour</a></li>
+        <li class="fix"><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li class="last"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</header>
+</div>
+<div id="containerFooter">
+<footer><p>&copy; 2011. Emunching.com</p></footer>
+</div>
+</body>
+</html>

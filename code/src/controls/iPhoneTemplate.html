@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title></title>
+  <script type="text/javascript">
+	function changeStyle(){
+		document.getElementById("PlaceHolder1").style.backgroundColor = document.getElementById("Color1").value; //"blue";
+		document.getElementById("PlaceHolder1").style.font = document.getElementById("FontStyle1").value + ' ' 
+														   + document.getElementById("FontSize1").value + ' ' 
+														   + document.getElementById("Font1").value; //"italic bold 20px arial,serif";
+		document.getElementById("PlaceHolder1").style.backgroundImage = 'url(' + document.getElementById("Image1").value + ')';
+		document.getElementById("PlaceHolder2").style.backgroundColor = document.getElementById("Color2").value; //"green";
+		document.getElementById("PlaceHolder2").style.font = document.getElementById("FontStyle2").value + ' ' 
+														   + document.getElementById("FontSize2").value + ' ' 
+														   + document.getElementById("Font2").value; //"italic bold 20px arial,serif";
+		document.getElementById("PlaceHolder2").style.backgroundImage = 'url(' + document.getElementById("Image2").value + ')';
+		document.getElementById("PlaceHolder3").style.backgroundColor = document.getElementById("Color3").value; //"purple";
+		document.getElementById("PlaceHolder3").style.font = document.getElementById("FontStyle3").value + ' ' 
+														   + document.getElementById("FontSize3").value + ' ' 
+														   + document.getElementById("Font3").value; //"italic bold 20px arial,serif";
+		document.getElementById("PlaceHolder3").style.backgroundImage = 'url(' + document.getElementById("Image3").value + ')';
+		document.getElementById("PlaceHolder4").style.backgroundColor = document.getElementById("Color4").value; //"orange";
+		document.getElementById("PlaceHolder4").style.font = document.getElementById("FontStyle4").value + ' ' 
+														   + document.getElementById("FontSize4").value + ' ' 
+														   + document.getElementById("Font4").value; //"italic bold 20px arial,serif";
+		document.getElementById("PlaceHolder4").style.backgroundImage = 'url(' + document.getElementById("Image4").value + ')';
+	}
+
+	function originalStyle(){
+		document.getElementById("PlaceHolder1").style.backgroundColor = "white";
+		document.getElementById("PlaceHolder1").style.font = "12px arial,serif";
+		document.getElementById("PlaceHolder1").style.backgroundImage = '';
+		document.getElementById("PlaceHolder2").style.backgroundColor = "white";
+		document.getElementById("PlaceHolder2").style.font = "12px arial,serif";
+		document.getElementById("PlaceHolder2").style.backgroundImage = '';
+		document.getElementById("PlaceHolder3").style.backgroundColor = "white";
+		document.getElementById("PlaceHolder3").style.font = "12px arial,serif";
+		document.getElementById("PlaceHolder3").style.backgroundImage = '';
+		document.getElementById("PlaceHolder4").style.backgroundColor = "white";
+		document.getElementById("PlaceHolder4").style.font = "12px arial,serif";
+		document.getElementById("PlaceHolder4").style.backgroundImage = '';
+
+		document.getElementById("Font1").selectedIndex = 0;
+		document.getElementById("Font2").selectedIndex = 0;
+		document.getElementById("Font3").selectedIndex = 0;
+		document.getElementById("Font4").selectedIndex = 0;
+
+		document.getElementById("FontStyle1").selectedIndex = 0;
+		document.getElementById("FontStyle2").selectedIndex = 0;
+		document.getElementById("FontStyle3").selectedIndex = 0;
+		document.getElementById("FontStyle4").selectedIndex = 0;
+
+		document.getElementById("FontSize1").selectedIndex = 0;
+		document.getElementById("FontSize2").selectedIndex = 0;
+		document.getElementById("FontSize3").selectedIndex = 0;
+		document.getElementById("FontSize4").selectedIndex = 0;
+
+		document.getElementById("Color1").selectedIndex = 0;
+		document.getElementById("Color2").selectedIndex = 0;
+		document.getElementById("Color3").selectedIndex = 0;
+		document.getElementById("Color4").selectedIndex = 0;
+
+		document.getElementById("Image1").selectedIndex = 0;
+		document.getElementById("Image2").selectedIndex = 0;
+		document.getElementById("Image3").selectedIndex = 0;
+		document.getElementById("Image4").selectedIndex = 0;
+	}
+  </script>
+ </head>
+ <body bgcolor="#CCCCCC">
+ <table cellspacing="0" cellpadding="10" border="0">
+	<tr>
+		<td>
+		  <img src="/images/iPhone-Template3.png" width="458" height="996" border="0" alt="">
+		  <div id="PlaceHolder1" style="position:absolute;top:196px;left:54px;width:382px;height:80px;background-color:white;border: dashed 1px black;font:12px arial,serif;">Place Holder 1</div>
+		  <div id="PlaceHolder2" style="position:absolute;top:276px;left:54px;width:382px;height:200px;background-color:white;border: dashed 1px black;font:12px arial,serif;">Place Holder 2</div>
+		  <div id="PlaceHolder3" style="position:absolute;top:476px;left:54px;width:382px;height:200px;background-color:white;border: dashed 1px black;font:12px arial,serif;">Place Holder 3</div>
+		  <div id="PlaceHolder4" style="position:absolute;top:676px;left:54px;width:382px;height:68px;background-color:white;border: dashed 1px black;font:12px arial,serif;">Place Holder 4</div>
+		  <br>ORIG: Y181,Z700,X419,Z(2)700
+		  <br>MOD: T189,L45.5,W382.5,H548
+		</td>
+		<td>
+		  <table cellspacing="0" cellpadding="0" border="1">
+			<tr>
+				<th colspan="2" align="center">Place Holder 1</th>
+			</tr>
+			<tr>
+				<td>Color 1</td>
+				<td>
+					<select id="Color1" size="1">
+						<option value="white" selected>White</option>
+						<option value="blue">Blue</option>
+						<option value="red">Red</option>
+						<option value="green">Green</option>
+						<option value="orange">Orange</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Font 1</td>
+				<td>
+					<select id="Font1" size="1">
+						<option value="Arial" selected>Arial</option>
+						<option value="Tahoma">Tahoma</option>
+						<option value="Palatino">Palatino</option>
+					</select>
+					&nbsp;
+					<select id="FontSize1" size="1">
+						<option value="12px" selected>12px</option>
+						<option value="20px">20px</option>
+						<option value="27px">27px</option>
+					</select>
+					&nbsp;
+					<select id="FontStyle1" size="1">
+						<option value="" selected>None</option>
+						<option value="bold">Bold</option>
+						<option value="italic">Italic</option>
+						<option value="bold italic">Bold, Italic</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Image 1 <br><font size="1">(W 382.5px H 80px)</font></td>
+				<td>
+					<select id="Image1" size="1">
+						<option value="" selected>None</option>
+						<option value="/images/Image1-1.png">Image 1-1</option>
+						<option value="/images/Image1-2.png">Image 1-2</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<th colspan="2" align="center">Place Holder 2</th>
+			</tr>
+			<tr>
+				<td>Color 2</td>
+				<td>
+					<select id="Color2" size="1">
+						<option value="white" selected>White</option>
+						<option value="blue">Blue</option>
+						<option value="red">Red</option>
+						<option value="green">Green</option>
+						<option value="orange">Orange</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Font 2</td>
+				<td>
+					<select id="Font2" size="1">
+						<option value="Arial" selected>Arial</option>
+						<option value="Tahoma">Tahoma</option>
+						<option value="Palatino">Palatino</option>
+					</select>
+					&nbsp;
+					<select id="FontSize2" size="1">
+						<option value="12px" selected>12px</option>
+						<option value="20px">20px</option>
+						<option value="27px">27px</option>
+					</select>
+					&nbsp;
+					<select id="FontStyle2" size="1">
+						<option value="" selected>None</option>
+						<option value="bold">Bold</option>
+						<option value="italic">Italic</option>
+						<option value="bold italic">Bold, Italic</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Image 2 <br><font size="1">(W 382.5px H 200px)</font></td>
+				<td>
+					<select id="Image2" size="1">
+						<option value="" selected>None</option>
+						<option value="/images/Image2-1.png">Image 2-1</option>
+						<option value="/images/Image2-2.png">Image 2-2</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<th colspan="2" align="center">Place Holder 3</th>
+			</tr>
+			<tr>
+				<td>Color 3</td>
+				<td>
+					<select id="Color3" size="1">
+						<option value="white" selected>White</option>
+						<option value="blue">Blue</option>
+						<option value="red">Red</option>
+						<option value="green">Green</option>
+						<option value="orange">Orange</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Font 3</td>
+				<td>
+					<select id="Font3" size="1">
+						<option value="Arial" selected>Arial</option>
+						<option value="Tahoma">Tahoma</option>
+						<option value="Palatino">Palatino</option>
+					</select>
+					&nbsp;
+					<select id="FontSize3" size="1">
+						<option value="12px" selected>12px</option>
+						<option value="20px">20px</option>
+						<option value="27px">27px</option>
+					</select>
+					&nbsp;
+					<select id="FontStyle3" size="1">
+						<option value="" selected>None</option>
+						<option value="bold">Bold</option>
+						<option value="italic">Italic</option>
+						<option value="bold italic">Bold, Italic</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Image 3 <br><font size="1">(W 382.5px H 200px)</font></td>
+				<td>
+					<select id="Image3" size="1">
+						<option value="" selected>None</option>
+						<option value="/images/Image3-1.png">Image 3-1</option>
+						<option value="/images/Image3-2.png">Image 3-2</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<th colspan="2" align="center">Place Holder 4</th>
+			</tr>
+			<tr>			
+				<td>Color 4</td>
+				<td>
+					<select id="Color4" size="1">
+						<option value="white" selected>White</option>
+						<option value="blue">Blue</option>
+						<option value="red">Red</option>
+						<option value="green">Green</option>
+						<option value="orange">Orange</option>
+					</select>
+				</td>
+			</tr>
+			<tr>			
+				<td>Font 4</td>
+				<td>
+					<select id="Font4" size="1">
+						<option value="Arial" selected>Arial</option>
+						<option value="Tahoma">Tahoma</option>
+						<option value="Palatino">Palatino</option>
+					</select>
+					&nbsp;
+					<select id="FontSize4" size="1">
+						<option value="12px" selected>12px</option>
+						<option value="20px">20px</option>
+						<option value="27px">27px</option>
+					</select>
+					&nbsp;
+					<select id="FontStyle4" size="1">
+						<option value="" selected>None</option>
+						<option value="bold">Bold</option>
+						<option value="italic">Italic</option>
+						<option value="bold italic">Bold, Italic</option>
+					</select>
+				</td>
+			</tr>
+			<tr>				
+				<td>Image 4 <br><font size="1">(W 382.5px H 68px)</font></td>
+				<td>
+					<select id="Image4" size="1">
+						<option value="" selected>None</option>
+						<option value="/images/Image4-1.png">Image 4-1</option>
+						<option value="/images/Image4-2.png">Image 4-2</option>
+					</select>
+				</td>
+			</tr>
+		  </table>
+		  <br><button type="button" id="btn" runat="server" onclick="changeStyle();">Change Style(s)</button>&nbsp;&nbsp;<button type="button" id="btn1" runat="server" onclick="originalStyle();">Reset</button>
+		 </td>
+	</tr>
+</table>
+ </body>
+</html>
