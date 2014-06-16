@@ -1,0 +1,84 @@
+#slideshow {width:750px; height:800px; overflow:hidden; position:relative; background:#303030; color:#eee; font-family:arial, sans-serif; margin:25px auto;
+-o-border-radius: 5px;
+-icab-border-radius: 5px;
+-khtml-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-o-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+-icab-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+-khtml-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+}
+#imageBack {width:500px; height:746px; position:absolute; top:60px; left:10px; background:#000; /*996*/
+-o-border-radius: 5px;
+-icab-border-radius: 5px;
+-khtml-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-o-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+-icab-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+-khtml-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+-moz-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+-webkit-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+}
+#slideshow h1.title{font-size:22px; color:#eee; margin:0 10px; padding:15px 0 12px 0; background: url(/images/dots.gif) repeat-x left bottom;}
+#slideshow .imageText h1 {font-size:22px ;margin:0; padding:0;}
+#slideshow .imageText p {font-size:11px; margin:0; padding:5px 0; line-height:16px;}
+#slideshow .imageText b {display:block; width:300px; height:9px; overflow:hidden; background: url(/images/dots.gif);}
+#buttons {position:absolute; top:1050px; left:10px; width:500px; height:60px; background:#000;
+-o-border-radius: 5px;
+-icab-border-radius: 5px;
+-khtml-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-o-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+-icab-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+-khtml-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+-moz-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+-webkit-box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.5);
+}
+#buttons p {padding:10px 0 0 0; margin:0; width:480px; text-align:center;}
+#buttons b {padding:0 5px; cursor:pointer; font-size:13px; font-weight:bold; background:#000; color:#eee;}
+#buttons b.current {background:#eee; color:#000;}
+#previous {width:22px; height:22px; background:#777 url(/images/arrow-left.gif); cursor:pointer; position:absolute; left:527px; top:20px;
+-o-border-radius: 5px;
+-icab-border-radius: 5px;
+-khtml-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-o-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+-icab-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+-khtml-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+}
+#next {width:22px; height:22px; background:#777 url(/images/arrow-right.gif);  cursor:pointer; position:absolute; left:555px; top:20px;
+-o-border-radius: 5px;
+-icab-border-radius: 5px;
+-khtml-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-o-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+-icab-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+-khtml-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+}
+#number {position:absolute; right:240px; top:22px; font-size:13px; font-weight:bold; padding:0; margin:0;}
+.imageText {position:absolute; left:520px; top:60px; width:210px; height:190px; overflow:hidden; padding:5px;}
+.imageText div {width:210px; height:200px; position:relative; top:200px; z-index:500;}
+.imageHolder {position:absolute; left:20px; top: 60px; width:480px; height:746px; overflow:hidden;}
+.imageHolder img {display:block; margin:10px auto; position:relative; left:-500px; top:0; width:480px;}
+.imageHolder1 {position:absolute; left:20px; top: 60px; width:480px; height:746px; overflow:hidden;}
+.imageHolder1 img {display:block; margin:10px auto; position:relative; left:-500px; top:0; width:480px;}
